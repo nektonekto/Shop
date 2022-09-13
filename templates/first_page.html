@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oxygen</title>
+</head>
+<body>
+    <h1 align="center">Main</h1>
+    <h2 align="center">Info</h2>
+    <h2 align="center">Доступные товары</h2>
+    <table align="center">
+        <thead>
+            <tr>
+                {% for i in labels %}
+                    <td>{{ i }}</td>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody align="center">
+            {% for i in content %}
+            <tr>
+                {% for j in i %}
+                    <td>{{ j }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
